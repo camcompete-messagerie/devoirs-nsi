@@ -10,13 +10,10 @@
   <h1>Devoirs de NSI</h1>
   <div id="files-container"></div>
   <footer><b>PS: pour parler petite <a href="https://camcompete-messagerie.onrender.com">messagerie</a> de ma composition </b>
-  <b>©THEvenger</b></footer>
-  <div id="ip"></div>
+  <b><br>©THEvenger</b></footer>
 <script>
   fetch('/my-ip')
     .then(r => r.json())
-    .then(data => document.getElementById('ip').innerText = data.ip)
-    .catch(e => document.getElementById('ip').innerText = 'Erreur : ' + e.message);
 </script>
   <script>
     async function loadFiles() {
@@ -37,6 +34,7 @@
         downloadBtn.textContent = "⬇️ Télécharger";
         downloadBtn.onclick = function() {window.location.href = file.url};
         downloadBtn.download = "";
+        downloadBtn.id = "downloadBtn";
         downloadBtn.className = "btn download";
 
         div.appendChild(title);
@@ -49,6 +47,7 @@
   </script>
 </body>
 </html>
+
 
 
 
