@@ -52,4 +52,32 @@ h1 {
   background: #357abd;
 }
 
+#b1 {
+  display: flex;
+  justify-content: center;
+}
 
+#b2 {
+  display: flex;
+  justify-content: center;
+}
+
+#b3 {
+  display: flex;
+  justify-self: center;
+  padding: 8px 12px;
+  background: #4a90e2;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+#b3:hover{
+  background: #357abd;
+}
+
+a {
+  margin-left: 2px;
+  margin-right: 2px;
+}
