@@ -31,7 +31,6 @@ app.get('/my-ip', (req, res) => {
   const xff = req.headers['x-forwarded-for'];
   const ip = (xff && xff.split(',').shift().trim()) || req.socket.remoteAddress;
   console.log(ip)
-  res.json({ ip });
 });
 
 // Servir les fichiers
@@ -40,5 +39,6 @@ app.use("/files", express.static(path.join(__dirname, "files")));
 app.listen(PORT, () => {
   console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`);
 });
+
 
 
