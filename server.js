@@ -32,7 +32,7 @@ app.get('/my-ip', (req, res) => {
   const ip = (xff && xff.split(',').shift().trim()) || req.socket.remoteAddress;
   console.log(ip)
   console.log(req.headers);
-  return res.json({ "correct" });
+  return res.json({ ip });
 });
 
 // Servir les fichiers
@@ -41,6 +41,7 @@ app.use("/files", express.static(path.join(__dirname, "files")));
 app.listen(PORT, () => {
   console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`);
 });
+
 
 
 
