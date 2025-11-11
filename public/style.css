@@ -38,7 +38,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-a {
+.downloadBtn {
   display: inline-block;
   padding: 8px 12px;
   background: #4a90e2;
@@ -48,6 +48,7 @@ a {
   transition: background 0.3s;
 }
 
-a:hover {
+.downloadBtn:hover {
   background: #357abd;
 }
+
